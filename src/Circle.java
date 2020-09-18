@@ -6,10 +6,14 @@ public class Circle {
 
     public Circle(double radius){
         this.radius=radius;
+        setColor(radius);
     }
 
-    private double getRadius(){
+    double getRadius(){
         return radius;
+    }
+    String getColor(){
+        return color;
     }
 
     private double getArea(){
@@ -18,14 +22,23 @@ public class Circle {
 
     private void setColor(double r){
         for (int i = 1; 1<= r; i++){
-            if (i<10){
+            if (i>=0 && i<6){
                 color="red";
             }
-            if (i>=10 && i<50){
+            else if (i>=6 && i<11){
                 color="amber";
             }
-            else if(i>50){
-                color="green";
+            else if(i>10&&i<16){
+                color="blue";
+            }
+            else if(i>15&&i<21){
+                color="purple";
+            }
+            else if(i>20&&i<25){
+                color="black";
+            }
+            else{
+                color="white";
             }
         }
     }
